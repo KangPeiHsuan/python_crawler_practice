@@ -1,5 +1,5 @@
 ## 爬蟲練習
-參考影片：[【 Python 爬蟲 】2 小時初學者課程 ：一次學會 PTT 爬蟲、Hahow 爬蟲、Yahoo 電影爬蟲！](https://youtu.be/1PHp1prsxIM?si=qqmTt5agW67bNMbF)
+參考影片：[【 Python 爬蟲 】2 小時初學者課程 ：一次學會 PTT 爬蟲、Hahow 爬蟲、Yahoo 電影爬蟲！](https://youtu.be/1PHp1prsxIM?si=qqmTt5agW67bNMbF)  
 實作筆記：[ [NOTE] Python 爬蟲練習](https://hackmd.io/@kangpei/BJpAnUFNJe)
 
 ### PTT 爬蟲 韓劇版(KoreaDrama)
@@ -17,7 +17,7 @@
 4. 將 data_list 儲存成 Excel 檔案
 
 #### 下載後指令
-$ pip install -r requirements.txt
+$ pip install -r requirements.txt  
 $ python ptt_crawler_koreadrama.py
 
 
