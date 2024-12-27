@@ -1,5 +1,8 @@
 ## 爬蟲練習
 參考影片：[【 Python 爬蟲 】2 小時初學者課程 ：一次學會 PTT 爬蟲、Hahow 爬蟲、Yahoo 電影爬蟲！](https://youtu.be/1PHp1prsxIM?si=qqmTt5agW67bNMbF)  
+參考影片：[Python 應用 - 爬蟲篇 part1 | 看的到怎麼可能爬不回來！？](https://www.youtube.com/watch?v=qsZk97m_PsI)
+參考影片：[Python 爬蟲高級技巧：突破網路防護、模仿瀏覽器、使用 Cookie 與每日自動化排程全攻略 | 成為爬蟲王 (‧o‧) (‧o‧) (‧o‧)](https://www.youtube.com/watch?v=QdHd3hGMDAo&t=3s)
+參考影片：[【python】selenium 網頁自動化、網路爬蟲 ｜ 爬蟲 ｜ python 爬蟲 ｜ 自動化 ｜pycharm ｜ #爬蟲 #python爬蟲 #自動化](https://youtu.be/ximjGyZ93YQ?si=pcg_tCx8UdeeWUb_)
 實作筆記：[ [NOTE] Python 爬蟲練習](https://hackmd.io/@kangpei/BJpAnUFNJe)
 
 ### 下載後指令
@@ -16,8 +19,6 @@
 - JSON 套件：用來處理 JSON 資料
 - Pandas 套件：用來處理和分析資料
 - Openpyxl 套件：用來處理 Excel 檔案
-- Selenium 套件：用來模擬瀏覽器行為，適用於動態網頁
-- Webdriver_manager 套件：Selenium 相關套件，用來管理瀏覽器驅動 ChromeDriver，會自動匹配瀏覽器版本
 
 #### 實作步驟：
 1. 發送 HTTP 請求，取得網頁原始碼
@@ -48,3 +49,24 @@
 #### 實作步驟：
 1. 確認為多頁式分頁，使用 for 迴圈，取得每個頁面的網頁原始碼
 2. 使用 BeautifulSoup 解析網頁原始碼，提取資料(電影名稱、上映日期)
+
+### 爬取 IG 關鍵字圖片
+:::danger
+1. IG 有自動偵測爬蟲，如果爬蟲太頻繁，會被 IG 封鎖，請小心使用
+2. 爬蟲 IG 圖片需要使用到 IG 帳號，請先註冊 IG 帳號，並在 .env 檔案中填入帳號密碼，才能執行爬蟲程式
+:::
+
+#### URL：https://www.instagram.com/
+#### 使用套件：
+- Selenium 套件：用來模擬瀏覽器行為，適用於動態網頁
+    - WebDriverWait 套件：用來等待元素出現
+    - EC 套件：用來等待元素出現
+- Webdriver_manager 套件：Selenium 相關套件，用來管理瀏覽器驅動 ChromeDriver，會自動匹配瀏覽器版本
+- dotenv 套件：用來管理環境變數
+- wget 套件：用來下載圖片
+
+#### 實作步驟：
+1. 使用 Selenium 模擬瀏覽器行為，登入 IG 帳號
+2. ~~使用 Selenium 模擬瀏覽器行為，搜尋關鍵字~~
+    因為無法使用點擊方式(selenium.click()/js點擊/ActionChains滑鼠點擊)順利打開搜尋欄位，所以先透過 url 打開搜尋頁面
+3. 使用 Selenium 模擬瀏覽器行為，下載圖片

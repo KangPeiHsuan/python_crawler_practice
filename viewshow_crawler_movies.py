@@ -3,8 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-# 設定 chromedriver 路徑
-# service = Service(executable_path='/Users/kangpei/Chromedriver_114.0.5735.90_Mac_Arm64/chromedriver')
+# 設定使用哪個瀏覽器的 webdriver
+# service = Service(executable_path='.../your_path/chromedriver')
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 for i in range(1, 4):
